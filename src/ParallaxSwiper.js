@@ -84,17 +84,14 @@ class ParallaxSwiper extends Component {
     } = this.props;
 
     return (
-      <View pointerEvents="box-none">
+      <View pointerEvents="box-none" style={{flex: 1}}>
         <Animated.ScrollView
           ref={(scrollView) => {
             this.animatedScrollView = scrollView;
           }}
           scrollEnabled={scrollEnabled}
           style={{
-            width: vertical
-              ? this.state.width
-              : this.state.width + dividerWidth,
-            height: this.state.height,
+            flex: 1,
             backgroundColor,
           }}
           horizontal={!vertical}
